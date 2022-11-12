@@ -12,7 +12,7 @@ function buscarEnObjecto(objecto, palabra)  {
 var vm = new Vue({
     el: "#app",
     data: {
-        title: 'Lista de Usuarios',
+        title: 'Lista de productos',
         showLista: true,
         showfrmEditar: false,
         showfrmAgregar: false,

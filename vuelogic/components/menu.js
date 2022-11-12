@@ -1,7 +1,7 @@
 //esta forma incluye todos los elementos en los archivos en los que se importa el archivo
 //implementarlo con la forma props/template 
 Vue.component('dynamic-menu', {
-    data: function () {
+    data: function (){
         if(localStorage.getItem("loggedIn")){
             options = {
                 method: "POST",
@@ -61,9 +61,9 @@ Vue.component('dynamic-menu', {
         return {}
     },    
     template: `
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark" type="black" style="background-color:rgb(111, 186, 61);">
         <div class="container-fluid">
-            <a class="navbar-brand" href="http://localhost/spiii-vue/view/dashboard.html">Ejercicio Integrador</a>
+            <a class="navbar-brand" href="http://localhost/spiii-vue/view/Dashboard.html">Productos</a>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
