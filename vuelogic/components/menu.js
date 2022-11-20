@@ -1,5 +1,3 @@
-//esta forma incluye todos los elementos en los archivos en los que se importa el archivo
-//implementarlo con la forma props/template 
 Vue.component('dynamic-menu', {
     data: function (){
         if(localStorage.getItem("loggedIn")){
@@ -78,13 +76,10 @@ Vue.component('dynamic-menu', {
 
 Vue.component('overlay',{
     beforeMount(){
-        //console.log('se carga el css, antes de q termine de cargar el dom')
         load_styles()
     },
     mounted(){
-        //console.log('se carga el dom')
         display_overlay(true)
-        //console.log('overlay desplegado')
     },
     template: `
     <div id="overlay">
@@ -110,17 +105,13 @@ function display_overlay(show){
     document.getElementById("overlay").style.display = "none";
     endTime = new Date();
     //console.log(endTime)
-
-    var timeDiff = endTime - startTime; //in ms
-    // strip the ms
+    var timeDiff = endTime - startTime;
     timeDiff /= 1000;
-    // get seconds 
     var seconds = Math.round(timeDiff);
-    //console.log(seconds + " seconds");
 }
 function load_styles(){
-    var cssId = 'myCss';  // you could encode the css path itself to generate id..
-    var FAid = 'FAid';  // you could encode the css path itself to generate id..
+    var cssId = 'myCss'; 
+    var FAid = 'FAid';  
     if (!document.getElementById(cssId))
     {
         var head  = document.getElementsByTagName('head')[0];
@@ -131,7 +122,6 @@ function load_styles(){
         linkOwnCss.href = '../css/styles.scss';
         linkOwnCss.media = 'all';
         head.appendChild(linkOwnCss);
-        //appending Font Awesome to every module visited
         var linkFA  = document.createElement('link');
         linkFA.id = FAid
         linkFA.rel  = 'stylesheet';

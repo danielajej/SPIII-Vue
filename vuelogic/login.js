@@ -22,15 +22,8 @@ app = new Vue({
             console.log(page)
 
             if(token != null && page == "index.html"){
-                window.location.href ='dashboard.html'
+                window.location.href ='Dashboard.html'
             }
-       /*  
-        
-        if(token != 'undefined' && page == "index.html"){
-            this.props.history.push('/')
-        } */
-        //vm.fn_login(100)
-        //console.log('created complete')
     },
     methods: {
         
@@ -73,33 +66,4 @@ app = new Vue({
             console.log('enviar');
         }
     }
-})
-// redireccionar a la primera página de los módulos,funcion para verificar el acceso com la q ya tengo en el otro proyecto
-//devolver consulta del usuario
- /* let xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost/spiii-vue/model/modelLogin.php");
-            //xhr.open("POST", "../model/modelLogin.php");
-
-            xhr.setRequestHeader("Content-Type", "application/json");
-
-            xhr.onload = () => console.log(JSON.parse(xhr.response));
-
-            xhr.send(data); */
-           /*  fetch(rel_path, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json', "Accept": "application/json"},
-                data: data,
-            })
-            .then((response) =>{
-                console.log(response.text())
-            }).then((result) =>{
-                console.log(result);
-            })
-            .catch(err => {
-                console.error(err);
-            })  
-
-            console.log('login')
-            console.log('email = ' + vm.usuario.email)
-            console.log('login= ' + vm.usuario.password)
-          */
+});
